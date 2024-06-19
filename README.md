@@ -1,6 +1,6 @@
-# Unsplash Photo Gallery App
+# NewStation
 
-This single-page app fetches photos from the Unsplash API and provides a user-friendly interface for browsing and searching images. It uses Tailwind CSS for styling and includes features like real-time search suggestions, debouncing for API calls, and image pop-up modals.
+This single-page app fetches news data from the NewsAPI and provides a user-friendly interface for browsing and searching for news. It uses Tailwind CSS for styling and includes features like real-time news data and detailed pop-up modals.
 
 ## Table of Contents
 - [Getting Started](#getting-started)
@@ -16,19 +16,21 @@ To run this app locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/unsplash-photo-gallery.git
-   cd unsplash-photo-gallery
+   git clone https://github.com/paramsgit/newStation.git
+   cd newStation
     ```
 2. Install the dependencies:
 
     ```bash
     npm install
     ```
-3. Configure the Unsplash API:
+3. Configure the News API:
 
-    Sign up for an Unsplash API key at https://unsplash.com/developers.
+
 Create a .env file in the project root and add your API key:
-```REACT_APP_UNSPLASH_API_KEY=your_api_key_here```
+```REACT_APP_API=your_api_key_here```
+Also add endpoints to fetch data:
+```REACT_APP_NEWS_HEADLINE_URL=https://newsapi.org/v2/```
 
 4. Run the development server:
 
@@ -38,17 +40,14 @@ npm start
 Open your browser and go to http://localhost:3000 to use the app.
 
 ## Features
-- Fetching Photos: The app fetches photos from the Unsplash API. The photo lists can be found in the returned JSON data.
- The main page displays a list of image thumbnails with the name of the user and the number of likes. This data comes from the Unsplash List Photos API.
-
-- Real-Time Search : You can search for photos using the Unsplash search API. There is a search bar at the top of the page for this purpose.
-Typing anything in the search bar updates the page view with the image search results in real-time.
-
-- Image Pop-Up Modals: Clicking on any photo in the list displays the actual image in a pop-up modal. The modal includes details such as user information, likes count, user's social links, and other relevant data from the API.
-
-- Search Suggestions: The search bar provides real-time suggestions that come from Google's API.
-
-- Debouncing: Debouncing is implemented to prevent excessive API calls when typing in the search bar.
+- Real-time News Data: Fetches the latest news articles from NewsAPI.
+- Search Functionality: Allows users to search for news articles based on keywords.
+- Detailed Pop-up Modals: Provides detailed views of each news article in a modal.
+- Responsive Design: Fully responsive layout using Tailwind CSS to ensure usability on different devices.
+- Bookmarking: Users can bookmark their favorite articles for later reference.
+- Dark Mode: Toggle between light and dark themes for better readability.
+- Pagination: Efficiently navigates through pages of news articles.
+- Loading Indicators: Visual feedback while fetching data to enhance user experience..
 
 ## Dependencies
 This app relies on the following major dependencies:
